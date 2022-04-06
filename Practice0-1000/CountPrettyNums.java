@@ -7,24 +7,13 @@ public class CountPrettyNums {
             int L = ir.nextInt();
             int R = ir.nextInt();
             int count=0;
+            //METHOD-2: Optimised solution.
             int div = R/10;
             int rem = R%10;
             if(L==R &&(L==2 || L==3 || L==9)){
                 count=1;
-            }else if(L<10 && R<10){
-                if(rem==9){
-                    count = 3;
-                }else if(rem>=3){
-                    count = 2;
-                }else if(rem>=2){
-                    count = 1;
-                }
-                rem = L%10;
-                if(rem>3) 
-                count -=2;
-                else if(rem>2)
-                count--;
-            }else{
+            }
+            else{
             if(rem==9){
                 count = div*3+3;
             }else if(rem>=3){
@@ -36,17 +25,26 @@ public class CountPrettyNums {
             }
             div = L/10;
             rem = L%10;
-            if(rem==9){
+            if(rem>9){
                 count =count-(div*3+3);
-            }else if(rem>=3){
+            }else if(rem>3){
                 count = count-(div*3+2);
-            }else if(rem>=2){
+            }else if(rem>2){
                 count = count-(div*3+1);
             }else{
                 count = count-div*3;
             }
             }
-            System.out.println(count);
+            
+            // Method-1: brute force
+            // while(L<=R){
+            //     if(L%10==2 || L%10==3 || L%10==9){
+            //         count++;
+            //     }
+            //     L++;
+            // }
+            // System.out.println(count);
         }
+        
     }
 }
