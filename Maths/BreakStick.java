@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -56,6 +57,13 @@ class InputReader{
 
     public double nextDouble(){
         return Double.parseDouble(next());
+    }
+    public void close(){
+       try {
+        br.close();
+       } catch (IOException e) {
+        System.out.println(e.getMessage());
+       }
     }
 }
 
