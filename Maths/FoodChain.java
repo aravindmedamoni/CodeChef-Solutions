@@ -7,6 +7,6 @@ public class FoodChain {
         while(t-->0){
             System.out.println((long)Math.floor(Math.log10(ir.nextLong())/Math.log10(ir.nextLong()))+1);
         }
-        ir.close();
+        
     }
 }

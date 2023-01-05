@@ -15,6 +15,6 @@ public class LostWeekends {
                 System.out.println("No");
             }
         }
-        ir.close();
+        
     }
 }
