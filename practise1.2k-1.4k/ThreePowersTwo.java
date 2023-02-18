@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
-public class SingleOperator {
-    
+public class ThreePowersTwo {
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-->0) {
             int n = sc.nextInt();
             String s = sc.next();
-            int pos=0;
+            int count=0;
             for(int i=0;i<n;i++){
-                if(s.charAt(i)!='0'){
-                    pos++;
-                }else{
-                    break;
+                if(s.charAt(i)=='1'){
+                    count++;
                 }
             }
-            System.out.println(pos);
+            if(count>=4|| count==1&&n<3){
+                System.out.println("NO");
+            }else{
+                System.out.println("Yes");
+            }
         }
         sc.close();
     }
