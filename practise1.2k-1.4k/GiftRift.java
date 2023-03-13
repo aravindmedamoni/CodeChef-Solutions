@@ -23,7 +23,7 @@ public class GiftRift {
                     cIndex=j;
                 }
             }
-            while(cIndex<r){
+            while(cIndex<c){
                 for(byte temp=0;temp<r&& arr[i][cIndex]==min;temp++){
                   //  System.out.println("min "+min+"cIn "+cIndex);
                     if(arr[temp][cIndex]>min){
